@@ -1,4 +1,3 @@
-
 user = User.create! email: 'noll.kyle@gmail.com',
                     password: 'password',
                     password_confirmation: 'password'
