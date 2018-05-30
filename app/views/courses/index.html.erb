@@ -5,20 +5,18 @@
   <br>
   <hr>
 
-  <% @courses.each do |course| %>
-    <h2 class="text-center">
-      <%= link_to course.title, course_path(course) %> 
-    </h2>
-    <br>
-    <div class="row">
-      <div class="col-sm-8 col-12">
-        <%= course.description %>
+  <div class="row">
+    <% @courses.each do |course| %>
+      <div class="col-sm-4 col-12">
+        <div class="card text-center">
+          <h3><%= course.title %></h3>
+          <% if course.image.present? %>
+            <%= image_tag course.image %>
+          <% end %>
+          <p><%= course.description %></p>
+          <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary' %> 
+        </div>
       </div>
-      <div class="col-sm-4 col-12 text-center">
-        <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %>      
-      </div>
-    </div>  
-    <br class="clr">
-    <br class="clr">
-  <% end %>
+    <% end %>
+  </div>
 </div>
