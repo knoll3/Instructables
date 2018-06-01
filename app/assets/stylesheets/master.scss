@@ -95,6 +95,11 @@ h1, h2, h3, h4, h5, h6, .navbar {
   width: 100%;
 }
 
+.article h1 {
+  font-weight: 900;
+  font-size: 30px;
+}
+
 .course-description {
   text-align: left;
 }
@@ -114,4 +119,21 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .section h4 {
   font-weight: 600;
+}
+
+.lesson-title {
+  font-size: 14px;
+}
+
+.lesson-subtitle {
+  color: black;
+  font-size: 14px;
+}
+
+.course-header a {
+  float: right;
+}
+
+.course-edit-button a {
+  width: 100%;
 }
