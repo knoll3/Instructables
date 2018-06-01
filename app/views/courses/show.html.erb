@@ -1,42 +1,53 @@
 <br />
 
-<div class="booyah-box col-10 offset-1">
-  <h1><%= @course.title %></h1>
-  <br />
-  <% if @course.image.present? %>
-    <%= image_tag @course.image %>
-  <% end %>
-  <div class="row">
-    <div class="col-sm-4 col-12 text-center">
-      <span class="badge badge-default">
-        <%= number_to_currency @course.cost %>
-      </span>
+<div class="booyah-box col-12 col-sm-10 offset-sm-1">
+  <div class="col-12 col-sm-6 offset-sm-3 text-center article">
+    <h1><%= @course.title %></h1>
 
-      <% if current_user && current_user == @course.user %>
-        <br />
-        <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
-      <% end %>
-    </div>
+    <br>
 
-    <div class="col-sm-8 col-12">
+    <% if @course.image.present? %>
+      <%= image_tag @course.image, class: 'center-block' %>
+    <% end %>
+
+   <br><br> 
+
+  <!--   <% if current_user && current_user == @course.user %>
+      <br />
+      <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+    <% end %>
+   -->
+
+    <div class="course-description">
       <%= @course.description %>
     </div>
 
-    <div class="col-12">
+    <br> 
+
+    <span class="badge badge-default">
+      Cost: <%= number_to_currency @course.cost %>
+    </span>
+
+    <hr> 
+
+    <ul class="sections">  
       <% @course.sections.each do |section| %>
-        <div class="section">
-          <%= section.title %>
-          <% section.lessons.each do |lesson| %>
-            <div class="lesson">
-              <%= link_to lesson_path(lesson) do %>
-                <b><%= lesson.title %></b>
-                -
-                <%= lesson.subtitle %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+        <li>
+          <div class="section">
+            <h4><%= section.title %></h4>
+            <br>
+            <% section.lessons.each do |lesson| %>
+              <div class="lesson">
+                <%= link_to lesson_path(lesson) do %>
+                  <b><%= lesson.title %></b>
+                  -
+                  <%= lesson.subtitle %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </li>
       <% end %>
-    </div>
+    </ul>
   </div>
 </div>
