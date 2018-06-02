@@ -2,22 +2,24 @@
 
 <div class="booyah-box col-12 col-lg-10 offset-lg-1">
   <%= link_to 'Back to home', root_path %>
-  <h1 class="text-center">Learn something today</h1>
-  <br>
-  <hr>
+  <div class=" col-12 col-lg-10 offset-lg-1">
+    <h1 class="text-center">Learn something today</h1>
+    <br>
+    <hr>
 
-  <div class="row">
-    <% @courses.each do |course| %>
-      <div class="col-12 col-lg-4">
-        <div class="card text-center">
-          <h3><%= course.title %></h3>
-          <% if course.image.present? %>
-            <%= image_tag course.image %>
-          <% end %>
-          <p><%= course.description %></p>
-          <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary' %> 
+    <div class="row">
+      <% @courses.each do |course| %>
+        <div class="col-12 col-lg-4">
+          <div class="card text-center">
+            <h3><%= course.title %></h3>
+            <% if course.image.present? %>
+              <%= image_tag course.image %>
+            <% end %>
+            <p><%= truncate(course.description, length: 255) %></p>
+            <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary' %> 
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

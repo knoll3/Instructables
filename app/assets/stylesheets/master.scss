@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .card {
-  height: 500px;
+  height: 425px;
   padding: 20px;
   margin-right: 5px;
   margin-left: 5px;
@@ -88,6 +88,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .card img {
   width: 100%;
   margin: 0 auto;
+}
+
+.card a {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  left: 5%;
 }
 
 .article img {
@@ -125,7 +132,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin-right: 2px;
   margin-bottom: 15px;
   padding: 10px;
-  height: 115px;
+  height: 90px;
 }
 
 .lesson hr {
