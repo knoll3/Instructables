@@ -27,3 +27,7 @@ Things you may want to cover:
 To do: 
 - Course descriptions on course index should on display a fixed number of lines.
 - 'More Details...' button on course cards in course index should always be at the bottom.
+- Paginate course index
+- Improve background
+- Considering removing booyah boxes
+

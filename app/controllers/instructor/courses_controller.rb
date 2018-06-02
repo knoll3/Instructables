@@ -3,7 +3,7 @@ class Instructor::CoursesController < ApplicationController
   before_action :require_authorized_for_current_course, only: [:show]
 
   def new
-    current_course = Course.new
+    @course = Course.new
   end
 
   def create
