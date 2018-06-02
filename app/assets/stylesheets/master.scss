@@ -120,13 +120,28 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-weight: 600;
 }
 
+.lesson {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 15px;
+  padding: 10px;
+  height: 115px;
+}
+
+.lesson hr {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
 .lesson-title {
-  font-size: 14px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .lesson-subtitle {
   color: black;
   font-size: 14px;
+  text-align: center;
 }
 
 .course-header a {

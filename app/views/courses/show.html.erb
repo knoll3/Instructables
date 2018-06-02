@@ -38,17 +38,20 @@
             <h4><%= section.title %></h4>
             <br>
             <div class="row">
-              <% section.lessons.limit(3).each do |lesson| %>
+              <% section.lessons.each do |lesson| %>
 
-                <div class="col-12 col-sm-4 lesson">
-                  <%= link_to lesson_path(lesson) do %>
-                    <div class="lesson-title">
-                      <b><%= lesson.title %></b>
-                    </div>
-                    <p class="lesson-subtitle">
-                      <%= lesson.subtitle %>
-                    </p>
-                  <% end %>
+                <div class="col-12 col-sm-4">
+                  <div class="lesson">
+                    <%= link_to lesson_path(lesson) do %>
+                      <div class="lesson-title">
+                        <b><%= lesson.title %></b>
+                      </div>
+                      <hr>
+                      <p class="lesson-subtitle">
+                        <%= truncate(lesson.subtitle, length: 80) %>
+                      </p>
+                    <% end %>
+                  </div>
                 </div>
 
               <% end %>
