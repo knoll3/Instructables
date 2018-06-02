@@ -27,7 +27,13 @@
 
     <br> 
 
-    <b>Cost: <%= number_to_currency @course.cost %></b>
+    <% if current_user && current_user.enrolled_in?(@course) %>
+      <h3 class="badge badge-info">You Are Enrolled!</h3>
+    <% else %>
+      <b>Cost: <%= number_to_currency @course.cost %></b>
+      <br>
+      <%= link_to 'Enroll', course_enrollments_path(@course), class: 'enroll-btn btn btn-primary', method: :post %>
+    <% end %>
 
     <hr> 
 

@@ -30,4 +30,7 @@ To do:
 - Paginate course index
 - Improve background
 - Considering removing booyah boxes
+- Review has_many through relationship in lesson 27.
+- Instructors should not be able to enroll in their own course
+
 
