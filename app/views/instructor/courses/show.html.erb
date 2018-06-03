@@ -18,17 +18,17 @@
       <li>
         <%= section.title %> 
         <ul>
-          <% section.lessons.each do |lesson| %>
+          <% section.lessons.rank(:row_order).each do |lesson| %>
             <li><b><%= lesson.title %></b>
             - 
             <%= lesson.subtitle %>
             </li>
           <% end %>
-          <%= link_to 'New Lesson', '#' %>
+          <%= link_to 'New Lesson', new_instructor_section_lesson_path(section) %>
         </ul>
           
       </li>
     <% end %>
-    <%= link_to 'New Section', '#' %>
+    <%= link_to 'New Section', new_instructor_course_section_path(current_course) %>
   </ul>
 </div>
