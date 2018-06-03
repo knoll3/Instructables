@@ -2,70 +2,33 @@
 
 <div class="booyah-box col-12 col-lg-10 offset-lg-1">
   <%= link_to 'Back to course page', course_path(current_course) %>
-  <div class="col-12 col-lg-6 offset-lg-3 text-center article">
-    <br>
-    <div class="row">
-      <div class="col-12 col-lg-4 offset-lg-4">
-        <h1><%= current_course.title %></h1>
-      </div>
-      <div class="col-12 col-lg-2 offset-lg-2 course-edit-button">
-        <%= link_to 'Preview', course_path(current_course), class: 'btn btn-warning float-right' %>
-      </div>
-    </div>
-
-    <% if current_course.image.present? %>
-      <%= image_tag current_course.image, class: 'center-block' %>
+  <br>
+  <h1><%= current_course.title %></h1>
+  <hr>
+  <h3>Course Image </h3>
+  <br>
+  <%= image_tag current_course.image, width: '300px' %>
+  <hr>
+  <h3>Cost </h3>
+  <br>
+  <%= number_to_currency current_course.cost %>
+  <hr>
+  <ul>
+    <% current_course.sections.each do |section| %>
+      <li>
+        <%= section.title %> 
+        <ul>
+          <% section.lessons.each do |lesson| %>
+            <li><b><%= lesson.title %></b>
+            - 
+            <%= lesson.subtitle %>
+            </li>
+          <% end %>
+          <%= link_to 'New Lesson', '#' %>
+        </ul>
+          
+      </li>
     <% end %>
-
-    <br><br> 
-
-    <div class="course-description">
-      <%= current_course.description %>
-    </div>
-
-    <br> 
-
-    <b>Cost: <%= number_to_currency current_course.cost %></b>
-
-    <hr> 
-    <div class="row">
-      <div class="col-12 col-lg-3">
-        <%= link_to '+ New Section', new_instructor_course_section_path(current_course), class: 'new-section-btn float-left btn btn-primary' %> 
-      </div>
-    </div>
-
-    <ul class="sections">  
-      <% current_course.sections.each do |section| %>
-        <li>
-          <div class="section">
-            <div class="row">
-              <div class="col-12 col-lg-9">
-                <h4 class='float-left'><%= section.title %></h4>
-              </div>
-              <div class="col-12 col-lg-3">
-                <%= link_to '+ New Lesson', new_instructor_section_lesson_path(section), class: 'new-lesson-btn float-right btn btn-primary' %> 
-              </div>
-            </div>
-            <br class="clr">
-            <div class="row">
-              <% section.lessons.each do |lesson| %>
-
-                <div class="col-12 col-lg-4 lesson">
-                  <%= link_to lesson_path(lesson) do %>
-                    <div class="lesson-title">
-                      <b><%= lesson.title %></b>
-                    </div>
-                    <p class="lesson-subtitle">
-                      <%= lesson.subtitle %>
-                    </p>
-                  <% end %>
-                </div>
-
-              <% end %>
-            </div>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+    <%= link_to 'New Section', '#' %>
+  </ul>
 </div>

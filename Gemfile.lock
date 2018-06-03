@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: a6d3a63439703c4757270dc1fa17bb6ebc325dae
+  revision: f77699480a1b3fce6ecba75dca82d216657f9ef0
   branch: master
   specs:
     faker (1.8.7)
       i18n (>= 0.7)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   remote: https://rails-assets.org/
   specs:
     actioncable (5.1.6)
@@ -50,7 +50,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.5.0)
+    autoprefixer-rails (8.6.0)
       execjs
     aws-eventstream (1.0.0)
     aws-partitions (1.90.0)
@@ -67,7 +67,7 @@ GEM
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.2)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
     bindex (0.5.0)
     bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
@@ -107,24 +107,25 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.7.1)
-    excon (0.61.0)
+    excon (0.62.0)
     execjs (2.7.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.23)
+    ffi (1.9.24)
     figaro (1.1.1)
       thor (~> 0.14)
-    fog-aws (2.0.1)
-      fog-core (~> 1.38)
-      fog-json (~> 1.0)
+    fog-aws (3.0.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-core (1.45.0)
+    fog-core (2.1.0)
       builder
       excon (~> 0.58)
       formatador (~> 0.2)
-    fog-json (1.0.2)
-      fog-core (~> 1.0)
+      mime-types
+    fog-json (1.1.0)
+      fog-core (~> 2.0)
       multi_json (~> 1.10)
     fog-xml (0.1.3)
       fog-core
@@ -220,9 +221,9 @@ GEM
     selenium-webdriver (3.12.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    simple_form (4.0.0)
-      actionpack (> 4)
-      activemodel (> 4)
+    simple_form (4.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -245,7 +246,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.10)
+    uglifier (4.1.11)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -257,7 +258,7 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (3.0.0)
+    xpath (3.1.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
@@ -295,4 +296,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
