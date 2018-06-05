@@ -32,5 +32,6 @@ To do:
 - Considering removing booyah boxes
 - Review has_many through relationship in lesson 27.
 - Instructors should not be able to enroll in their own course
+- Lesson can be dragged from one section to another. Study http://jsfiddle.net/1obcs1vc/5/
 
 
