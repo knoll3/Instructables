@@ -190,7 +190,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
-  margin: 20px;
+  background: white;
+  cursor: move;
+  margin: 10px;
+}
+
+.section-li a {
+  text-decoration: none;
+}
+
+.add-lesson-icon {
+  font-size: 20px;
 }
 
 ul .header {
@@ -202,13 +212,22 @@ ul .header .fa {
 }
 
 .lessons li {
-  background: black;
-  color: white;
   margin: 10px;
-  // font-family: "Helvetica Neue", Helvetica;
-  // font-weight: 100;
   padding: 8px;
+  padding-left: 40px;
   font-size: 15px;
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  background: white;
+}
+
+.lessons li:active {
+  -ms-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
+  -ms-transform: translate(-5px, -5px);
+  -webkit-transform: translate(-5px, -5px);
+  transform: translate(-5px, -5px);
 }
 
 .lessons li b {
@@ -218,4 +237,21 @@ ul .header .fa {
 
 .lessons li p {
   margin: 0;
+}
+
+.collapse-btn {
+  cursor: pointer;
+}
+
+.expand-link {
+  cursor: pointer;
+}
+
+#expand-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.course-image {
+  width: 100%;
 }
