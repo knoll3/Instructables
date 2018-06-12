@@ -13,6 +13,7 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def update
+    # make sure user is able to add lesson to section similar to line 33
     current_lesson.update_attributes(lesson_params)
     render plain: 'updated!'
   end
@@ -41,6 +42,7 @@ class Instructor::LessonsController < ApplicationController
     end
 
     def lesson_params
+      # add section id
       params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position)
     end
 end
