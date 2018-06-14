@@ -3,9 +3,20 @@
 <div class="lesson-container booyah-box col-12 col-lg-10 offset-lg-1">
   <%= link_to 'Back to course', course_path(current_lesson.section.course) %>
   <h1><%= current_lesson.title %></h1>
-  <p>
+  <p class="float-left">
     <%= current_lesson.subtitle %>
   </p>
+
+  <% if current_lesson.next_lesson.present? %> 
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default float-right' do %>
+      Next Lesson &nbsp;
+      <span class="fa fa-forward"></span>
+    <% end %>
+  <% end %>
+
+  <br class="clr">
+  <br>
+
   <br><hr><br>
   <div class="col-12 col-lg-8 offset-lg-2">
     <% if current_lesson.video.present? %>
