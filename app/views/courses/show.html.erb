@@ -5,16 +5,15 @@
   <div class="col-12 col-lg-6 offset-lg-3 text-center article">
     <br>
     <div class="row">
-      <div class="col-12 col-lg-4 offset-lg-4">
+      <div class="col-8 offset-2">
         <h1><%= @course.title %></h1>
       </div>
-      <div class="col-12 col-lg-2 offset-lg-2 course-edit-button">
+      <div class="col-2 edit-link">
         <% if current_user && current_user == @course.user %>
-          <%= link_to 'Edit', instructor_course_path(@course), class: 'btn btn-danger' %>
+          <%= link_to 'Edit', instructor_course_path(@course) %>
         <% end %>
       </div>
     </div>
-
     <% if @course.image.present? %>
       <%= image_tag @course.image, class: 'center-block' %>
     <% end %>

@@ -37,6 +37,8 @@ To do:
 - Polish styling on dashboard
 - Find a good font
 - Make a logo
+- Courses show page should still work when there are no sections/lessons in production
+- 
 
 
 
