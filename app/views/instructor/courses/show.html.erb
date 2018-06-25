@@ -35,7 +35,16 @@
 
 <br />
 <div class="booyah-box col-10 offset-1">
-  <h1 class="text-center"><%= current_course.title %></h1>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1 class="text-center"><%= current_course.title %></h1>
+    </div>
+    <div class="col-2 edit-link">
+      <% if current_user && current_user == current_course.user %>
+        <%= link_to 'Preview', course_path(current_course) %>
+      <% end %>
+    </div>
+  </div>
   <div class="col-8 offset-2">
     <%= image_tag current_course.image, class: 'img-fluid course-image' %>
   </div>
