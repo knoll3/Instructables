@@ -82,7 +82,7 @@
               </button>
             </div>
           </div>
-          <ul class="lessons accordion-body collapse in" id="section-id-<%= section.id %>">
+          <ul class="lessons accordion-body out" id="section-id-<%= section.id %>">
             <% section.lessons.rank(:row_order).each do |lesson| %>
               <li data-update-url="<%= instructor_lesson_path(lesson) %>">
                 <p>
