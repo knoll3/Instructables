@@ -1,44 +1,46 @@
-# README
+# Instructables
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructables is a Ruby on Rails application that allows people to create courses and instructional videos on any topic. 
+In addition to Ruby on Rails, this app demonstrates the usage of: 
+- HTML/CSS
+- Bootstrap
+- Devise
+- Jquery & HTTP requests with Ajax
+- Amazon s3 buckets for storage, CarrierWave, FogAWS, & video uploads
+- Secure payment processing with [Stripe](https://stripe.com/)
 
-Things you may want to cover:
+Visit [Instructables](https://instructables-kyle-noll.herokuapp.com/) on Heroku.
 
-* Ruby version
+Instructables was created as part of a remote coding bootcamp called [The Firehose Project](https://thefirehoseproject.com/).
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Clone the app and install the gem files
+```
+$ git clone git@github.com:knoll3/Instructables.git
+$ cd Instructables/
+$ bundle install
+```
+After this you should be good to go!
 
-* Database creation
+## Deployment
+To deploy this app into development 
+```
+$ heroku create choose-app-name
+$ git push heroku master
+```
+View app info
+```
+$ heroku apps:info
+```
+Open the app
+```
+$ heroku open
+```
 
-* Database initialization
+## Versions
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-To do: 
-- Course descriptions on course index should display a fixed number of lines.
-- 'More Details...' button on course cards in course index should always be at the bottom.
-- Paginate course index
-- Improve background
-- Considering removing booyah boxes
-- Review has_many through relationship in lesson 27.
-- Instructors should not be able to enroll in their own course
-- Lesson can be dragged from one section to another. Study http://jsfiddle.net/1obcs1vc/5/
-- Style sign in and sign up buttons
-- Polish styling on dashboard
-- Find a good font
-- Make a logo
-- Courses show page should still work when there are no sections/lessons in production
-- 
-
-
+Instructables uses 
+- Ruby 2.3.4
+- Rails 5.1.6
 
