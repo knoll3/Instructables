@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: 'flixter_kyle_noll.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'instructables_kyle_noll.herokuapp.com' }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -61,7 +61,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "flixter_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "instructables_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.

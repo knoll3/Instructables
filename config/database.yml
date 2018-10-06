@@ -8,14 +8,14 @@ default: &default
 
 development:
   <<: *default
-  database: flixter_development
+  database: instructables_development
 
 test:
   <<: *default
-  database: flixter_test
+  database: instructables_test
 
 production:
   <<: *default
-  database: flixter_production
-  # username: flixter
-  # password: <%= ENV['FLIXTER_DATABASE_PASSWORD'] %>
+  database: instructables_production
+  # username: instructables
+  # password: <%= ENV['INSTRUCTABLES_DATABASE_PASSWORD'] %>
